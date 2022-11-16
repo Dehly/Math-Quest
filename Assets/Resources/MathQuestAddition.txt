@@ -1,0 +1,39 @@
+Addition:
+
+To make an addition you need to count every value in the top screen. Click on the right button to see an addition example with the slimes.;
+Addition:
+
+The hero is walking and see some slimes.
+
+
+
+
+
+
+
+There is 0 slime.;
+Addition:
+
+When he gets close to the slimes, others slimes see him.
+
+
+
+
+
+
+There is 0 slime.;
+Addition:
+
+Now the hero is surrounded by 3 slimes in the left and 2 slimes in the right.
+
+
+
+
+
+There is 0 slime.;
+Addition:
+
+The same happens with the numbers. Like the numbers 32 and 45. In the center the addition is made.;
+Addition:
+
+Now, let's help the hero in your adventure!

@@ -1,0 +1,71 @@
+Under Construction!;
+Credits:
+
+- Graphics -
+
+Hiro (Hamstone)
+
+- Sounds -
+
+Carvi Media Entertainment
+
+- Musics -
+
+Carvi Media Entertainment
+
+Decoybird;
+Help:
+
+- Start: Play the game. The game datas will be save automatically.
+
+- Math Hints: Hints about how to make calculation.
+
+- Credits: Credits about the development of the game.;
+Help:
+
+- Menu: Back to the Title Screen.
+
+- Operations: Choose an operation to see the explanation and/or play.
+
+- Left/Right Arrow: Touch to change the page.
+
+- Play: Touch to ply the game.;
+Help:
+
+- Touch the left or right side to move the hero.
+
+- Touch in run button to make the hero run.
+
+- Put the hero in the right answer to get math points.
+
+- The wrong answer make the hero lost 1 heart.
+;
+Help:
+
+- Touch the button on the bottom-left to use the special. (if active). Will cost 1 special point.
+
+- Touch the potion on the top-left to go to the shop.
+
+- If the hero uses all lives he will die.;
+Help:
+
+- Menu: Back to the Title Screen.
+
+- Operations: Back to the Operations Screen.
+
+- Money: Watch video and receive double MP for 30 min.
+
+- Gem: Watch video and active special for 30 min.
+;
+Help:
+
+- Use the MPs to upgrade hearts, special and Math Lv and to use spells.
+
+- Math Lv unlocks stages.
+
+- The thunder spell can hit a random monster with the wrong value or miss.
+
+- Every stage will be more difficult when the number increase.
+;
+Do you really want to delete the game?;
+The game was erased.

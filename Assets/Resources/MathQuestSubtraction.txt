@@ -1,0 +1,40 @@
+Subtraction:
+
+To make a subtraction you need to remove the quantity from a value from the first value. Click on the right button to see an subtraction example with the bats.;
+Subtraction:
+
+The hero is surrounded by 3 bats in the left and 2 bats in the right.
+
+
+
+
+
+
+There is 0 bat.;
+Subtraction:
+
+With some attacks the hero destroys the 2 bats in the right side.
+
+
+
+
+
+
+There are 5 bats.;
+Subtraction:
+
+Now, there are 3 bats on the left side.
+
+
+
+
+
+
+
+There is 0 bat.;
+Subtraction:
+
+The same happens with the numbers. Like the numbers 27 and 15. In the center the subtraction is made from the first number.;
+Subtraction:
+
+Now, let's help the hero in your adventure!
