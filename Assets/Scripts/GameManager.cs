@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
     private Text versionTxt;
 	void Start ()
     {
+        operation = 2;
         credits = GameObject.Find("CreditsText").GetComponent<Text>();
         if (SceneManager.GetActiveScene().name == "Start")
         {
@@ -370,8 +371,6 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Game" || SceneManager.GetActiveScene().name == "Shop")
         {
-            operation = 1;
-            if (lifes != null)
             {
                 for (int i = 0; i < lifes.Length; i++)
                 {

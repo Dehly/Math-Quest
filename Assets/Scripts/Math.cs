@@ -9,6 +9,7 @@ public class Math : MonoBehaviour
     private int z;
     private int resultado;
     private string values;
+    private char[] op = { '+', '-', '*', '/' };
 
     private float tempo = 0;
 
@@ -19,6 +20,9 @@ public class Math : MonoBehaviour
     void Start()
     {
         values = "";
+        hud = new Text[1];
+        hud[0] = GameObject.Find("Equation").GetComponent<Text>();
+        GameManager.difficulty = 0;
         Randomize(text);
     }
 	void Update ()
@@ -94,70 +98,93 @@ public class Math : MonoBehaviour
                 z = Random.Range(0, 5000);
                 break;
         }
-        if (GameManager.operation == 1)
+        if (GameManager.difficulty % 2 == 0)
         {
-            if(GameManager.difficulty % 2 == 0)
+            hud[0].text = "" + x + " " + op[GameManager.operation-1] + " " + y;
+        }
+        else
+        {
+            int a = Random.Range(0, 4);
+            switch (a)
             {
-                hud[0].text = "" + x + " + " + y;
-            }
-            else
-            {
-                int a = Random.Range(0, 4);
-                switch(a)
-                {
-                    case 0: hud[0].text = "" + x + " + " + y + " + " + z;
-                        break;
-                    case 1:
-                        hud[0].text = "(" + x + " + " + y + ") + " + z;
-                        break;
-                    case 2:
-                        hud[0].text = "" + x + " + (" + y + " + " + z + ")";
-                        break;
-                    case 3:
-                        hud[0].text = "(" + x + " + " + y + " + " + z + ")";
-                        break;
-                }
+                case 0:
+                    hud[0].text = "" + x + " " + op[GameManager.operation - 1] + " " + y + " " + op[GameManager.operation - 1] + " " + z;
+                    break;
+                case 1:
+                    hud[0].text = "(" + x + " " + op[GameManager.operation - 1] + " " + y + ") " + op[GameManager.operation - 1] + " " + z;
+                    break;
+                case 2:
+                    hud[0].text = "" + x + " " + op[GameManager.operation - 1] + " (" + y + " " + op[GameManager.operation - 1] + " " + z + ")";
+                    break;
+                case 3:
+                    hud[0].text = "(" + x + " " + op[GameManager.operation - 1] + " " + y + " " + op[GameManager.operation - 1] + " " + z + ")";
+                    break;
             }
         }
-        if (GameManager.operation == 2)
-        {
-            if (GameManager.difficulty % 2 == 0)
-            {
-                hud[0].text = "" + x + " - " + y;
-            }
-            else
-            {
-                int a = Random.Range(0, 4);
-                switch (a)
-                {
-                    case 0:
-                        hud[0].text = "" + x + " - " + y + " - " + z;
-                        break;
-                    case 1:
-                        hud[0].text = "(" + x + " - " + y + ") - " + z;
-                        break;
-                    case 2:
-                        hud[0].text = "" + x + " - (" + y + " - " + z + ")";
-                        break;
-                    case 3:
-                        hud[0].text = "(" + x + " - " + y + " - " + z + ")";
-                        break;
-                }
-            }
-        }
-        else if (GameManager.operation == 2)
-        {
-            hud[0].text = "" + x + " - " + y;
-        }
-        else if (GameManager.operation == 3)
-        {
-            hud[0].text = "" + x + " * " + y;
-        }
-        else if (GameManager.operation == 4)
-        {
-            hud[0].text = "" + x + " / " + y;
-        }
-        if(GameManager.difficulty % 2 == 0)
+        //if (GameManager.operation == 1)
+        //{
+        //    if(GameManager.difficulty % 2 == 0)
+        //    {
+        //        hud[0].text = "" + x + " + " + y;
+        //    }
+        //    else
+        //    {
+        //        int a = Random.Range(0, 4);
+        //        switch(a)
+        //        {
+        //            case 0: hud[0].text = "" + x + " + " + y + " + " + z;
+        //                break;
+        //            case 1:
+        //                hud[0].text = "(" + x + " + " + y + ") + " + z;
+        //                break;
+        //            case 2:
+        //                hud[0].text = "" + x + " + (" + y + " + " + z + ")";
+        //                break;
+        //            case 3:
+        //                hud[0].text = "(" + x + " + " + y + " + " + z + ")";
+        //                break;
+        //        }
+        //    }
+        //}
+        //if (GameManager.operation == 2)
+        //{
+        //    if (GameManager.difficulty % 2 == 0)
+        //    {
+        //        hud[0].text = "" + x + " - " + y;
+        //    }
+        //    else
+        //    {
+        //        int a = Random.Range(0, 4);
+        //        switch (a)
+        //        {
+        //            case 0:
+        //                hud[0].text = "" + x + " - " + y + " - " + z;
+        //                break;
+        //            case 1:
+        //                hud[0].text = "(" + x + " - " + y + ") - " + z;
+        //                break;
+        //            case 2:
+        //                hud[0].text = "" + x + " - (" + y + " - " + z + ")";
+        //                break;
+        //            case 3:
+        //                hud[0].text = "(" + x + " - " + y + " - " + z + ")";
+        //                break;
+        //        }
+        //    }
+        //}
+        ////else if (GameManager.operation == 2)
+        ////{
+        ////    hud[0].text = "" + x + " - " + y;
+        ////}
+        //else if (GameManager.operation == 3)
+        //{
+        //    hud[0].text = "" + x + " * " + y;
+        //}
+        //else if (GameManager.operation == 4)
+        //{
+        //    hud[0].text = "" + x + " / " + y;
+        //}
+        if (GameManager.difficulty % 2 == 0)
             resultado = Operation(x, y);
         else
             resultado = Operation(x, y, z);

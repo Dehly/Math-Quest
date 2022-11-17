@@ -27,11 +27,14 @@ public class AlternativesMovement : MonoBehaviour
 
     void Update ()
     {
-        for (int i = 0; i < enemies.Length; i++)
+        if (GameManager.operation > 0)
         {
-            //enemies[i].SetActive(true);
-            enemies[i].GetComponent<Animator>().runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("en_" + GameManager.operation);
-            //bats[i].SetActive(false);
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                //enemies[i].SetActive(true);
+                enemies[i].GetComponent<Animator>().runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("en_" + (GameManager.operation - 1));
+                //bats[i].SetActive(false);
+            }
         }
         //else if (GameManager.operation == 2)
         //{
