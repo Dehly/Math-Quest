@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public static int spell;
     public static int[] spellValue;
     public static int[] statsLevel;
+    public int[] teste;
     public static int[] level;
     public static int[] statsValue;
     public static int[] mathValue;
@@ -49,9 +50,9 @@ public class GameManager : MonoBehaviour
     private string[] spellNames;
     private string[] statsNames;
     private int[] statsLimits;
-    private Image[] lifes;
+    public Image[] lifes;
     private Image[] stages;
-    private Image[] status;
+    public Image[] status;
     private Image[] mathPoints;
     private Image[][] spellCosts;
     private Image[][] statsCosts;
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour
     private Text versionTxt;
 	void Start ()
     {
-        operation = 2;
+        operation = 1;
         credits = GameObject.Find("CreditsText").GetComponent<Text>();
         if (SceneManager.GetActiveScene().name == "Start")
         {
@@ -105,6 +106,7 @@ public class GameManager : MonoBehaviour
             startG = true;
         timeT = new Text[2];
         adsButton = new Button[2];
+        teste = statsLevel;
 	}
 	
 	void Update ()
@@ -131,6 +133,7 @@ public class GameManager : MonoBehaviour
             recover = GameObject.Find("Recover");
             miss.SetActive(false);
             recover.SetActive(false);
+//            lifes = new Image[5];
             for (int i = 0; i < lifes.Length; i++)
             {
                 lifes[i] = GameObject.Find("HP" + i).GetComponent<Image>();
@@ -139,6 +142,7 @@ public class GameManager : MonoBehaviour
             aS = null;
             aS = FindObjectOfType<AudioSource>();
             retry = GameObject.Find("RetryPanel");
+            retry.SetActive(false);
             thunder = Resources.Load<GameObject>("Thunder");
             special = null;
             special = GameObject.Find("Canvas/HUD/SP/Image").GetComponent<Image>();
@@ -158,6 +162,7 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Shop" && startG)
         {
+            lifes = new Image[5];
             for (int i = 0; i < lifes.Length; i++)
             {
                 lifes[i] = GameObject.Find("HP" + i).GetComponent<Image>();
@@ -437,14 +442,14 @@ public class GameManager : MonoBehaviour
         return a;
     }
 
-    //private void OnLevelWasLoaded(int level)
-    //{
-    //    //lifes = new Image[5];
-    //    special = null;
-    //    aS = null;
-    //    Time.timeScale = 1;
-    //    startG = true;
-    //}
+    private void OnLevelWasLoaded(int level)
+    {
+        //lifes = new Image[5];
+        special = null;
+        aS = null;
+        Time.timeScale = 1;
+        startG = true;
+    }
 
     private void TextCall(string a)
     {

@@ -12,7 +12,6 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
         GameManager.death = false;
-        AlternativesMovement.lastQ = Time.time;
     }
 
     //Quit game
@@ -82,9 +81,9 @@ public class ButtonManager : MonoBehaviour
         {
             GameManager.sp--;
             GameManager.rand = Random.Range(0, 4);
-            if (GameManager.math.respostas[GameManager.rand].activeSelf == true && GameManager.math.respostas[GameManager.rand].tag == "Errada")
+            if (AlternativesMovement.enemies[GameManager.rand].gameObject.activeSelf == true && AlternativesMovement.enemies[GameManager.rand].tag == "Errada")
             {
-                GameObject o = Instantiate(GameManager.thunder, GameManager.math.respostas[GameManager.rand].transform);
+                GameObject o = Instantiate(GameManager.thunder, AlternativesMovement.enemies[GameManager.rand].transform);
                 o.transform.position = new Vector3(o.transform.position.x, o.transform.position.y - 1.5f);
                 //math.respostas[rand].SetActive(false);
             }

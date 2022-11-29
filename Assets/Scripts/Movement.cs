@@ -47,8 +47,9 @@ public class Movement : MonoBehaviour
         if (col.gameObject.tag == "Certa")
         {
             GameManager.aS.PlayOneShot(GameManager.audios.sounds[2]);
-            if(GameManager.points < 999)
-                GameManager.points += 1 * GameManager.factor;
+            GameManager.points += 1 * GameManager.factor;
+            if (GameManager.points > 999)
+                GameManager.points = 999;
             GameManager.cure++;
             GameManager.focus++;
             GameManager.next = true;
@@ -58,6 +59,7 @@ public class Movement : MonoBehaviour
         {
             GameManager.aS.PlayOneShot(GameManager.audios.sounds[0]);
             GameManager.life--;
+            GameManager.cure = 0;
             GameManager.focus = 0;
             GameManager.next = true;
         }
